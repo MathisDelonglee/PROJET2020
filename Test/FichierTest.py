@@ -44,9 +44,9 @@ def CalcFo(ListeEntiere):
     #print(pv)
     rau = 1000
     dS=((pv[0]**2+pv[1]**2+pv[2]**2)**(1/2))/2
-    print(dS)
+    print('Surface facette:',dS)
     p = rau*9.81*Zg
-    print(p)
+    print('pression:', p)
     Force += abs(p*dS)
     VectForce[0]+=Force*float(L[0][0])
     VectForce[1]+=Force*float(L[0][1])
@@ -54,10 +54,10 @@ def CalcFo(ListeEntiere):
     return Force, VectForce
 
 
-fichierSTL = open("TriRect90.txt","r")
+fichierSTL = open("FichierTestTriRect45.txt","r")
 
 ListeEntiere = Recup(fichierSTL)
-print(ListeEntiere)
+print('Facette :',ListeEntiere)
 a ,b = CalcFo(ListeEntiere)
-print(a)
-print(b)
+print("Norme de la force d'archimède:",a)
+print("Vecteur de la force d'archimède :",b)
