@@ -181,3 +181,4 @@ if __name__== '_main_': #si l'IHM ne s'affiche pas, enlever le [if __name__ == '
     ihm = Test()
     ihm.show()
     app.exec_()
+
