@@ -34,8 +34,7 @@ def CalcFo(ListeEntiere):
     VectForce = [0,0,0]
     L =ListeEntiere[0]
 
-    #Zg=(float(L[1][2])+float(L[2][2])+float(L[3][2]))/3
-    Zg=1
+    Zg=(float(L[1][2])+float(L[2][2])+float(L[3][2]))/3
     VectAB = [float(L[2][0])-float(L[1][0]),float(L[2][1])-float(L[1][1]),float(L[2][2])-float(L[1][2])]
     VectAC = [float(L[3][0])-float(L[1][0]),float(L[3][1])-float(L[1][1]),float(L[3][2])-float(L[1][2])]
     #print(VectAC)
@@ -54,7 +53,7 @@ def CalcFo(ListeEntiere):
     return Force, VectForce
 
 
-fichierSTL = open("FichierTestTriRect45.txt","r")
+fichierSTL = open("TriEqui_INCLINE_note.txt","r")
 
 ListeEntiere = Recup(fichierSTL)
 print('Facette :',ListeEntiere)
